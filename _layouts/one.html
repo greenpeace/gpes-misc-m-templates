@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width"/>
+<style>
+{% include framework.css %}
+</style>
+<style>
+{% include hero.css %}
+</style>
+</head>
+
+<body>
+<table class="body">
+<tr>
+<td class="center" align="center" valign="top">
+<center>
+
+<!-- HEADER -->
+{% include header.html %}
+<!-- /HEADER -->
+
+<table class="container">
+<tr>
+<td>
+
+<!-- TITLE, LEAD AND IMAGE -->
+{% include title_lead_image.html %}
+<!-- /TITLE, LEAD AND IMAGE -->
+
+<!-- EMAIL MAIN BODY -->
+{{ page.content }}
+<!-- /EMAIL MAIN BODY -->
+
+<!-- ACTION BUTTON -->
+{% if page.action_button  %}
+{% include action_button.html %}
+{% endif %}
+<!-- /ACTION BUTTON -->		
+
+<!-- SHARE+DONATE -->
+{% if page.share and page.donate %}
+{% include share_donate.html %}
+{% endif %}
+<!-- /SHARE+DONATE -->
+
+<!-- UNSUBSCRIBE TEXT -->
+{% include unsubscribe.html  %}
+<!-- /UNSUBSCRIBE TEXT -->
+
+
+</td>
+</tr>
+</table><!-- /container -->
+
+</center>
+</td>
+</tr>
+</table>
+</body>
+</html>

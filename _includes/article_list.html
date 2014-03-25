@@ -1,0 +1,43 @@
+<!-- Article list -->
+<table class="row">
+    <tr>
+        <td class="wrapper">
+            
+            {% for article in page.articles %}
+            <table class="twelve columns">
+                <tr>
+                    <td class="three sub-columns">
+                        <!-- Top Left sub-grid -->
+                        <a href="{{ article.link }}">
+                            <img width="120" height="110" src="{{ article.image }}" alt="{{ article.alt }}">
+                        </a>
+                    </td>
+                    <td class="nine sub-columns last">
+                        <!-- Top Right sub-grid -->
+                        <h4><a href="{{ article.link }}">{{ article.title }}</a></h4>
+                        {{ article.text }}
+                        <!-- custom wrapped button -->
+                        <table width="150">
+                            <tr>
+                                <td>
+                                    <a class="button" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <a href="{{ article.link }}">Read more &raquo;</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+            {% endfor %}
+          
+        </td>
+    </tr>
+</table>

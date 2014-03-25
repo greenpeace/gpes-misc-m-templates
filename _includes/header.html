@@ -1,0 +1,27 @@
+<table class="row header">
+    <tr>
+	<td class="center" align="center">
+	    <center>
+		<table class="container">
+		    <tr>
+			<td class="wrapper last">
+			    <table class="twelve columns">
+				<tr>
+				    <td class="six sub-columns">
+					<a href="{{ site.organization_url }}">
+					    <img src="{{ site.organization_logo }}" alt="{{ site.name }}">
+					</a>
+				    </td>
+				    <td class="six sub-columns last" align="right" style="text-align:right; vertical-align:middle;">
+					{% if site.cant_read_text and page.cant_read_URL %}<span class="template-label"><a href="{{ page.cant_read_URL }}">{{ site.cant_read_text }}</a></span>{% endif %}
+				    </td>
+				    <td class="expander"></td>
+				</tr>
+			    </table>
+			</td>
+		    </tr>
+		</table>
+	    </center>
+	</td>
+    </tr>
+</table>

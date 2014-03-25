@@ -1,0 +1,100 @@
+<table class="row">
+    <tr>
+        <!-- LEFT SIDE -->
+        <td class="wrapper">
+            <table class="six columns">
+                <tr>
+                    <td>
+                        {{ page.content }}
+                        {% if page.action_button %}
+                        <table class="button">
+                            <tr>
+                                <td>
+                                    <a href="{{ page.action_button.link }}">{{ page.action_button.text }}</a>
+                                </td>
+                            </tr>
+                        </table>
+                        {% endif %}
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+        </td>
+        <!-- /LEFT SIDE -->
+        
+        <!-- RIGHT SIDE -->
+        <td class="wrapper last">
+            
+            <!-- LIST OF LINKS -->
+            <table class="six columns">
+                <tr>
+                    <td class="panel">
+                        {% if page.sidebar.header %}<h3>{{ page.sidebar.header }}</h3>{% endif %}
+                        {{ page.sidebar.html }}
+                        <hr>
+                        
+                        {% for sidelink in page.sidebar.sidelinks %}
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="{{ sidelink.link }}">{{ sidelink.name }} &raquo;</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr>
+                        {% endfor %}
+                        
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+            <!-- /LIST OF LINKS -->
+            
+            <br>
+            
+            <table class="six columns">
+                <tr>
+                    <td class="panel">
+                        
+                        <h4>{{ page.donate.header }}</h4>
+			{{ page.donate.html }}
+                        
+                        <h4>{{ site.share.text }}</h4>
+                        <table class="tiny-button facebook">
+                            <tr>
+                              <td>
+                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}">Facebook</a>
+                              </td>
+                            </tr>
+                        </table>
+                        
+                        <hr>
+                        
+                        <table class="tiny-button twitter">
+                            <tr>
+                              <td>
+                                <a href="http://twitter.com/?status={{ page.share.tweet | truncate: 140 | UrlEncode }}">Twitter</a>
+                              </td>
+                            </tr>
+                        </table>
+                        
+                        <hr>
+                        
+                        <table class="tiny-button google-plus">
+                            <tr>
+                              <td>
+                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}">Google +</a>
+                              </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+         
+        </td>
+        <!-- RIGHT SIDE -->   
+    </tr>
+</table>
+<br>
