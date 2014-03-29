@@ -4,7 +4,7 @@ Greenpeace-themed **responsive** email templates for **quick** email **layouting
 
 ## About this templates
 + They use the [INK](http://zurb.com/ink/) framwework, already tested with many mail clients
-+ They use [Jekyll](http://jekyllrb.com/) and [Yaml](???) to be easier and quicker to modify content
++ They use [Jekyll](http://jekyllrb.com/) and [Yaml](http://www.yaml.org/) to be easier and quicker to modify content
 + Jekyll url-encodes Twitter and other social networks links
 + Can be easily adapted to many mail sending services
 + It's easy to create AB tests with content, design or layout
