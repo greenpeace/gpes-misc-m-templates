@@ -9,6 +9,7 @@ name: Greenpeace
 organization_url: http://www.greenpeace.org/
 organization_logo: images/greenpeace.png
 cant_read_text: If you can't read this message click here
+read_more_text: Read more &raquo;
 share:
     text: Share
 
