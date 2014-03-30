@@ -56,10 +56,13 @@
                 <tr>
                     <td class="panel">
                         
-                        <h4>{{ page.donate.header }}</h4>
+                        {% if page.donate %}
+                        {% if page.donate.header %}<h4>{{ page.donate.header }}</h4>{% endif %}
 			{{ page.donate.html }}
+                        {% endif %}
                         
-                        <h4>{{ site.share.text }}</h4>
+                        {% if page.share %}
+                        {% if site.share.text %}<h4>{{ site.share.text }}</h4>{% endif %}
                         <table class="tiny-button facebook">
                             <tr>
                               <td>
@@ -87,6 +90,7 @@
                               </td>
                             </tr>
                         </table>
+                        {% endif %}
                         
                     </td>
                     <td class="expander"></td>
