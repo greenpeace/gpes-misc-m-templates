@@ -11,18 +11,22 @@ Greenpeace-themed **responsive** email templates for **quick** email **layouting
 
 ## Develop mails in Github.com or locally?
 
-You can develop emails in Github or locally in your computer.
+You can develop emails in Github or locally in your computer. 
 
 ### A - In Github.com
-+ **Easily preview your emails.** - Github creates a webpage with your email if you develop it in the **gh-pages** branch. Your team can follow up your changes.
-+ **Accept collaboration** - With Github it's easy to fork, translate and improve content or design
++ **Easily preview your emails.** - Github creates a webpage with your email if you develop it in the **gh-pages** branch. Your team can follow up your changes. Example: Commited changes to [this text](https://github.com/osvik/m-templates/blob/gh-pages/newsletter/index.html) will immediately change [this page](http://osvik.github.io/m-templates/newsletter/index.html). 
 + **No software to install** - All editing can be done online
++ **Accept collaboration** - With Github it's easy to fork, translate and improve content or design
+
+_Instead of Github you can use Bitbucket's free private repositories to collaborate,  but instant previews will not work._
+
 
 ### B - Locally in your computer
-+ **Privacy** - Emails can't be read before they're sent
++ **Privacy** - Emails and change history can't be read in the repository github page
 + **Work offline** - layout emails without an Internet connection
 + Collaboration is not as easy as in Github
 + Users have to use very easy command line tools (Installing this tools may not be as easy for some users)
+
 
 ## In-linearize CSS
 In emails CSS should go inline, as some mail clients do not interpret &lt;style&gt; tags. You should in-linearize your email's CSS before uploading to your mail software.
