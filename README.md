@@ -3,7 +3,7 @@
 Greenpeace-themed **responsive** email templates for **quick** email **layouting**, **design** or development.
 
 ## About this templates
-+ They use the [INK](http://zurb.com/ink/) framwework, already tested with many mail clients
++ They use the [INK](http://zurb.com/ink/) framework, already tested with many mail clients
 + They use [Jekyll](http://jekyllrb.com/) and [Yaml](http://www.yaml.org/) to be easier and quicker to modify content
 + Jekyll url-encodes Twitter and other social networks links
 + Can be easily adapted to many mail sending services
@@ -14,7 +14,7 @@ Greenpeace-themed **responsive** email templates for **quick** email **layouting
 You can develop emails in Github or locally in your computer. 
 
 ### A - In Github.com
-+ **Easily preview your emails.** - Github creates a webpage with your email if you develop it in the **gh-pages** branch. Your team can follow up your changes. Example: Commited changes to [this text](https://github.com/osvik/m-templates/blob/gh-pages/newsletter/index.html) will immediately change [this page](http://osvik.github.io/m-templates/newsletter/index.html). 
++ **Easily preview your emails.** - Github creates a webpage with your email if you develop it in the **gh-pages** branch. Your team can follow up your changes. Example: Committed changes to [this text](https://github.com/osvik/m-templates/blob/gh-pages/newsletter/index.html) will immediately change [this page](http://osvik.github.io/m-templates/newsletter/index.html). 
 + **No software to install** - All editing can be done online
 + **Accept collaboration** - With Github it's easy to fork, translate and improve content or design
 
@@ -22,7 +22,7 @@ _Instead of Github you can use Bitbucket's free private repositories to collabor
 
 
 ### B - Locally in your computer
-+ **Privacy** - Emails and change history can't be read in the repository github page
++ **Privacy** - Emails and change history can't be read in the repository Github page
 + **Work offline** - layout emails without an Internet connection
 + Collaboration is not as easy as in Github
 + Users have to use very easy command line tools (Installing this tools may not be as easy for some users)
@@ -32,7 +32,7 @@ _Instead of Github you can use Bitbucket's free private repositories to collabor
 In emails CSS should go inline, as some mail clients do not interpret &lt;style&gt; tags. You should in-linearize your email's CSS before uploading to your mail software.
 
 + Online you can use the **[Inliner](http://zurb.com/ink/inliner.php)**
-+ Locally you can use **Premailer**
++ Locally you can use **[Premailer](https://github.com/osvik/m-templates#2---premailer)**
 
 ## Install software to layout emails without an Internet connection
 
@@ -44,7 +44,7 @@ For some users may be as simple as typing:
 
 `gem install jekyll`
 
-in the terminall/shell.
+in the terminal/shell.
 
 [More info](http://jekyllrb.com/docs/installation/)
 
@@ -60,9 +60,9 @@ in the terminal/shell.
 
 ### 3 - Git
 
-It's also recommended, but not mandatory, thay you [download and install git](http://git-scm.com/downloads/).
+It's also recommended, but not mandatory, that you [download and install git](http://git-scm.com/downloads/).
 
-## Quick howto's 
+## Quick how to
 
 ### Generate html with Jeyll
 
