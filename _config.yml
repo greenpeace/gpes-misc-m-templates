@@ -1,16 +1,25 @@
 # Jekyll configuration (do not change)
+
 encoding: "UTF-8"
+
 destination: ../output/
+
 exclude:
     - README.md
 
 # Mail Settings - Common to all emails
 name: Greenpeace
+
 organization_url: http://www.greenpeace.org/
+
 organization_logo: images/greenpeace.png
+
 cant_read_text: If you can't read this message click here
+
 read_more_text: Read more &raquo;
 share:
     text: Share
+
+utm_medium: email
 
 unsubscribe_text: Si prefieres que no te sigamos informando de las &uacute;ltimas novedades del medio ambiente y Greenpeace, puedes  <a xt="SPONECLICKOPTOUT" href="#SPONECLICKOPTOUT" name="OneClickOptOut">darte de baja</a> - &iexcl;aunque te echaremos de menos! :'(
