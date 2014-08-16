@@ -64,7 +64,7 @@
                         <table class="tiny-button facebook">
                             <tr>
                               <td>
-                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}">Facebook</a>
+                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}?utm_medium=social_network_link&utm_source=facebook&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.share.utm_campaign | UrlEncode }}&utm_term={{ page.share.utm_term | UrlEncode }}">Facebook</a>
                               </td>
                             </tr>
                         </table>
@@ -80,7 +80,7 @@
                         <table class="tiny-button google-plus">
                             <tr>
                               <td>
-                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}">Google +</a>
+                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}?utm_medium=social_network_link&utm_source=google-mas&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.share.utm_campaign | UrlEncode }}&utm_term={{ page.share.utm_term | UrlEncode }}">Google +</a>
                               </td>
                             </tr>
                         </table>
