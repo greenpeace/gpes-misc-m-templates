@@ -56,7 +56,8 @@
                         
                         {% if page.donate %}
                         {% if page.donate.header %}<h4>{{ page.donate.header }}</h4>{% endif %}
-			{{ page.donate.html }}
+			{% if page.donate.html %}{{ page.donate.html }}{% endif %}
+			{% if page.donate.call and page.donate.link  %}<p><a href="{{ page.donate.link }}">{{ page.donate.call }}</a></p>{% endif %}
                         {% endif %}
                         
                         {% if page.share %}
@@ -64,7 +65,7 @@
                         <table class="tiny-button facebook">
                             <tr>
                               <td>
-                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}?utm_medium=social_network_link&utm_source=facebook&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.share.utm_campaign | UrlEncode }}&utm_term={{ page.share.utm_term | UrlEncode }}">Facebook</a>
+                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dfacebook%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}">Facebook</a>
                               </td>
                             </tr>
                         </table>
@@ -80,7 +81,7 @@
                         <table class="tiny-button google-plus">
                             <tr>
                               <td>
-                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}?utm_medium=social_network_link&utm_source=google-mas&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.share.utm_campaign | UrlEncode }}&utm_term={{ page.share.utm_term | UrlEncode }}">Google +</a>
+                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dgoogle-mas%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}">Google +</a>
                               </td>
                             </tr>
                         </table>
