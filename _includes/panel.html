@@ -5,6 +5,7 @@
 		<tr>
 		    <td class="panel">
 			{{ page.panel_html }}
+			{% if page.panel  %}<p><a href="{{ page.panel.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.panel.utm_campaign | UrlEncode }}&utm_term={{ page.panel.utm_term | UrlEncode }}">{{ page.panel.text }}</a></p>{% endif %}
 		    </td>
 		    <td class="expander"></td>
 		</tr>

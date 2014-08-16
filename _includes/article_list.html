@@ -6,17 +6,20 @@
             {% for article in page.articles %}
             <table class="twelve columns">
                 <tr>
+                    {% if article.image  %}
                     <td class="three sub-columns">
                         <!-- Top Left sub-grid -->
-                        <a href="{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}">
+                        {% if article.link %}<a href="{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}">{% endif %}
                             <img width="120" height="110" src="{{ article.image }}" alt="{{ article.alt }}">
-                        </a>
+                        {% if article.link %}</a>{% endif %}
                     </td>
-                    <td class="nine sub-columns last">
+                    {% endif %}
+                    <td class="{% if article.image  %}nine{% endif %}{% if !article.image  %}twelve{% endif %} sub-columns last">
                         <!-- Top Right sub-grid -->
-                        <h4><a href="{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}">{{ article.title }}</a></h4>
+                        <h4>{% if article.link %}<a href="{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}">{% endif %}{{ article.title }}{% if article.link %}</a>{% endif %}</h4>
                         {{ article.html }}
                         <!-- custom wrapped button -->
+                        {% if article.link %}
                         <table width="150">
                             <tr>
                                 <td>
@@ -32,6 +35,7 @@
                                 </td>
                             </tr>
                         </table>
+                        {% endif %}
                     </td>
                     <td class="expander"></td>
                 </tr>

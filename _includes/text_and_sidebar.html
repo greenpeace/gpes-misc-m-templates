@@ -65,6 +65,7 @@
                         
                         {% if page.share %}
                         {% if site.share.text %}<h4>{{ site.share.text }}</h4>{% endif %}
+			{% if page.share.url  %}
                         <table class="tiny-button facebook">
                             <tr>
                               <td>
@@ -73,6 +74,8 @@
                             </tr>
                         </table>
                         <hr>
+			{% endif %}  
+			{% if page.share.tweet  %}
                         <table class="tiny-button twitter">
                             <tr>
                               <td>
@@ -81,6 +84,8 @@
                             </tr>
                         </table>
                         <hr>
+			{% endif %}
+			{% if page.share.url  %}
                         <table class="tiny-button google-plus">
                             <tr>
                               <td>
@@ -88,6 +93,7 @@
                               </td>
                             </tr>
                         </table>
+			{% endif %}
                         {% endif %}
                         
                     </td>

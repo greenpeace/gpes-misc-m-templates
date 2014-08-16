@@ -43,7 +43,7 @@
 		    <td class="last right-text-pad">
 			{% if page.donate.header %}<h4>{{ page.donate.header }}</h4>{% endif %}
 			{% if page.donate.html %}{{ page.donate.html }}{% endif %}
-			{% if page.donate.call and page.donate.link  %}<p><a href="{{ page.donate.link }}">{{ page.donate.call }}</a></p>{% endif %}
+			{% if page.donate.call and page.donate.link  %}<p><a href="{{ page.donate.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.donate.utm_campaign | UrlEncode }}&utm_term={{ page.donate.utm_term | UrlEncode }}">{{ page.donate.call }}</a></p>{% endif %}
 		    </td>
 		    <td class="expander"></td>
 		</tr>
