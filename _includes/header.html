@@ -8,7 +8,7 @@
 			    <table class="twelve columns">
 				<tr>
 				    <td class="six sub-columns">
-					<a href="{{ site.organization_url }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}">
+					<a href="{{ site.organization_url }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}">
 					    <img src="{{ site.organization_logo }}" alt="{{ site.name }}">
 					</a>
 				    </td>

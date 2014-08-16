@@ -7,7 +7,7 @@
 		    <td>
 			{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
 			{% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
-			{% if page.main_image.link %}<a href="{{ page.main_image.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}&utm_campaign={{ page.main_image.utm_campaign }}&utm_term={{ page.main_image.utm_term }}">{% endif %}
+			{% if page.main_image.link %}<a href="{{ page.main_image.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.main_image.utm_campaign | UrlEncode }}&utm_term={{ page.main_image.utm_term | UrlEncode }}">{% endif %}
 			    {% if page.main_image.file %}<img width="580" height="300" src="{{ page.main_image.file }}" alt="{{ page.main_image.alt }}">{% endif %}					    
 			{% if page.main_image.link %}</a>{% endif %}
 		    </td>
