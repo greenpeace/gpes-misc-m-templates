@@ -10,7 +10,7 @@
                         <table class="button">
                             <tr>
                                 <td>
-                                    <a href="{{ page.action_button.link }}">{{ page.action_button.text }}</a>
+                                    <a href="{{ page.action_button.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}">{{ page.action_button.text }}</a>
                                 </td>
                             </tr>
                         </table>
@@ -36,7 +36,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="{{ sidelink.link }}">{{ sidelink.name }} &raquo;</a>
+                                    <a href="{{ sidelink.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}">{{ sidelink.name }} &raquo;</a>
                                 </td>
                             </tr>
                         </table>
