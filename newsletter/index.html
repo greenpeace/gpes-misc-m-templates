@@ -1,29 +1,36 @@
 ---
 
 # ++++++++ Do not remove the layout definition. Should match a template file in the _layouts folder (newsletter.html)
+
 layout: newsletter
 
 # utm_source is where you identify the audience. For example: newsletter-socios-leads, newsletter-socios or newsletter-leads
+
 utm_source: newsletter-socios-leads
 
 # utm_content is where you identify the email content
+
 utm_content: my_newsletter_name
 
 # .... You can remove any of the blocks bellow, if you don't need them.
 
 # ++++++++ URL with a copy of this email 
+
 cant_read_URL: http://www.example.org/path/to/your/mail/
 
 
 # ++++++++ The email title
+
 title: Exercitation ullamco laboris nisi
 
 
 # ++++++++ Lead
+
 lead: Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
 
 # ++++++++ Main image (jpeg 580 x 300 px)
+
 main_image:
     file: images/photo.jpg
     link: http://www.greenpeace.org
@@ -33,6 +40,7 @@ main_image:
 
 
 # ++++++++  Action button. Button sizes can be: large, medium, small, tiny.
+
 action_button:
     link: http://www.greenpeace.org
     utm_campaign: my_campaign
@@ -40,21 +48,25 @@ action_button:
     text: Act now!
     size: small
 
+# ++++++++ List of articles. You can have as many articles as you want or remove all.
 
-# ++++++++ List of articles. You can have as many articles as you want or remove all. Article images: 120 x 110 px
 articles:
+
     - title: Sint occaecat cupidatat non proident
       link: http://www.greenpeace.org
       utm_campaign: my_campaign
       utm_term: my_link_tag
+      # image thumb 120 x 110 px
       image: images/article1.jpg
       alt: This one alt text
       html: >
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
     - title: Ut enim ad minim veniam
       link: http://www.greenpeace.org
       utm_campaign: my_campaign
       utm_term: my_link_tag_2
+      # image thumb 120 x 110 px
       image: images/article2.jpg
       alt: Short alt text
       html: >
@@ -62,18 +74,23 @@ articles:
 
 
 # ++++++++ Facebook, Twitter and Google+ sharing URL's. Also donate message module. Tweet max 140 chars. Jekyll will URL-encode the tweet.
+
 share:
-    url: http://www.greenpeace.org
+    url: http://www.greenpeace.org/espana/es/
     utm_campaign: my_campaign
     utm_term: my_link_tag
     # Tweet here. Max 140 chars. Jekyll will URL-encode the tweet.
-    tweet: Please go to http://www.greenpeace.org
+    tweet: Please go to http://bit.ly/
+
 donate:
     header: Donate
     html: >
         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <strong>deserunt mollit</strong> anim id est laborum.</p>
-        <p><a href="http://www.greenpeace.org/">Donate now!</a></p>
 
+    call: Donate now!
+    link: https://colabora.greenpeace.es/
+    utm_campaign: my_campaign
+    utm_term: my_link_tag
 
 ---
 
