@@ -8,6 +8,7 @@ Greenpeace-themed **responsive** email templates for **quick** email **layouting
 + Jekyll url-encodes Twitter and other social networks links
 + Can be easily adapted to many mail sending services
 + It's easy to create AB tests with content, design or layout
++ Automatic Google Analytics campaign URLs
 
 ## Develop mails in Github.com or locally?
 

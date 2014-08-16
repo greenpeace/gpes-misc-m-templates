@@ -8,13 +8,13 @@
                 <tr>
                     <td class="three sub-columns">
                         <!-- Top Left sub-grid -->
-                        <a href="{{ article.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}">
+                        <a href="{{ article.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}&utm_campaign={{ article.utm_campaign }}&utm_term={{ article.utm_term }}">
                             <img width="120" height="110" src="{{ article.image }}" alt="{{ article.alt }}">
                         </a>
                     </td>
                     <td class="nine sub-columns last">
                         <!-- Top Right sub-grid -->
-                        <h4><a href="{{ article.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}">{{ article.title }}</a></h4>
+                        <h4><a href="{{ article.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}&utm_campaign={{ article.utm_campaign }}&utm_term={{ article.utm_term }}">{{ article.title }}</a></h4>
                         {{ article.html }}
                         <!-- custom wrapped button -->
                         <table width="150">
@@ -24,7 +24,7 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <a href="{{ article.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}">{{ site.read_more_text }}</a>
+                                                    <a href="{{ article.link }}?utm_medium={{ site.utm_medium }}&utm_source={{ page.utm_source }}&utm_content={{ page.utm_content }}&utm_campaign={{ article.utm_campaign }}&utm_term={{ article.utm_term }}">{{ site.read_more_text }}</a>
                                                 </td>
                                             </tr>
                                         </table>
