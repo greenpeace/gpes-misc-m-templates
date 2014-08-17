@@ -22,4 +22,4 @@ share:
 
 utm_medium: email
 
-unsubscribe_text: Si prefieres que no te sigamos informando de las &uacute;ltimas novedades del medio ambiente y Greenpeace, puedes  <a xt="SPONECLICKOPTOUT" href="#SPONECLICKOPTOUT" name="OneClickOptOut">darte de baja</a> - &iexcl;aunque te echaremos de menos! :'(
+unsubscribe_text: Si prefieres que no te sigamos informando de las &uacute;ltimas novedades del medio ambiente y Greenpeace, puedes  <a href="{unsubscribe_url~7740~3126}" name="OptOut">darte de baja</a> - &iexcl;aunque te echaremos de menos! :'(
