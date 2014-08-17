@@ -6,11 +6,12 @@
                 <tr>
                     <td>
                         {{ page.content }}
+			
                         {% if page.action_button %}
                         <table class="button">
                             <tr>
                                 <td>
-                                    <a href="{{ page.action_button.link }}">{{ page.action_button.text }}</a>
+                                    <a href="{{ page.action_button.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.action_button.utm_campaign | UrlEncode }}&utm_term={{ page.action_button.utm_term | UrlEncode }}">{{ page.action_button.text }}</a>
                                 </td>
                             </tr>
                         </table>
@@ -30,13 +31,15 @@
                 <tr>
                     <td class="panel">
                         {% if page.sidebar.header %}<h3>{{ page.sidebar.header }}</h3>{% endif %}
+			
                         {{ page.sidebar.html }}
+			
                         <hr>
                         {% for sidelink in page.sidebar.sidelinks %}
                         <table>
                             <tr>
                                 <td>
-                                    <a href="{{ sidelink.link }}">{{ sidelink.name }} &raquo;</a>
+                                    <a href="{{ sidelink.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ sidelink.utm_campaign | UrlEncode }}&utm_term={{ sidelink.utm_term | UrlEncode }}">{{ sidelink.name }} &raquo;</a>
                                 </td>
                             </tr>
                         </table>
@@ -56,19 +59,23 @@
                         
                         {% if page.donate %}
                         {% if page.donate.header %}<h4>{{ page.donate.header }}</h4>{% endif %}
-			{{ page.donate.html }}
+			{% if page.donate.html %}{{ page.donate.html }}{% endif %}
+			{% if page.donate.call and page.donate.link  %}<p><a href="{{ page.donate.link }}">{{ page.donate.call }}</a></p>{% endif %}
                         {% endif %}
                         
                         {% if page.share %}
                         {% if site.share.text %}<h4>{{ site.share.text }}</h4>{% endif %}
+			{% if page.share.url  %}
                         <table class="tiny-button facebook">
                             <tr>
                               <td>
-                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}">Facebook</a>
+                                <a href="http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dfacebook%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}">Facebook</a>
                               </td>
                             </tr>
                         </table>
                         <hr>
+			{% endif %}  
+			{% if page.share.tweet  %}
                         <table class="tiny-button twitter">
                             <tr>
                               <td>
@@ -77,13 +84,16 @@
                             </tr>
                         </table>
                         <hr>
+			{% endif %}
+			{% if page.share.url  %}
                         <table class="tiny-button google-plus">
                             <tr>
                               <td>
-                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}">Google +</a>
+                                <a href="https://plus.google.com/share?url={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dgoogle-mas%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}">Google +</a>
                               </td>
                             </tr>
                         </table>
+			{% endif %}
                         {% endif %}
                         
                     </td>

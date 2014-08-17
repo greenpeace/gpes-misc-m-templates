@@ -3,11 +3,12 @@
 Greenpeace-themed **responsive** email templates for **quick** email **layouting**, **design** or development.
 
 ## About this templates
-+ They use the [INK](http://zurb.com/ink/) framework, already tested with many mail clients
-+ They use [Jekyll](http://jekyllrb.com/) and [Yaml](http://www.yaml.org/) to be easier and quicker to modify content
-+ Jekyll url-encodes Twitter and other social networks links
++ They use the [INK](http://zurb.com/ink/) framework, already **tested** with many mail clients
++ They use [Jekyll](http://jekyllrb.com/) and [Yaml](http://www.yaml.org/) to be **easier and quicker** to modify content
++ Jekyll **url-encodes** Twitter and other social networks links
 + Can be easily adapted to many mail sending services
 + It's easy to create AB tests with content, design or layout
++ Automatic **Google Analytics campaign URLs**
 
 ## Develop mails in Github.com or locally?
 
@@ -18,7 +19,7 @@ You can develop emails in Github or locally in your computer.
 + **No software to install** - All editing can be done online
 + **Accept collaboration** - With Github it's easy to fork, translate and improve content or design
 
-_Instead of Github you can use Bitbucket's free private repositories to collaborate,  but instant previews will not work._
+_Instead of Github you can use Bitbucket's free private repositories to collaborate, but instant previews will not work._
 
 
 ### B - Locally in your computer
