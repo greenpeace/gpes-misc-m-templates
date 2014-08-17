@@ -1,0 +1,50 @@
+{% if page.title %}*** {{ page.title | upcase }} ***{% endif %}
+
+{{ page.lead }}
+
+----------
+{{ page.panel_html | strip_html }}
+{{ page.panel.text | upcase }}
+{% if page.panel.link  %}{{ page.panel.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.panel.utm_campaign | UrlEncode }}&utm_term={{ page.panel.utm_term | UrlEncode }}{% endif %}
+----------
+{{ page.content | strip_html }}
+{% if page.action_button %}
+++ {{ page.action_button.text | upcase }} ++
+{{ page.action_button.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.action_button.utm_campaign | UrlEncode }}&utm_term={{ page.action_button.utm_term | UrlEncode }}
+{% endif %}
+----------
+
+{% if page.sidebar.header %} ++ {{ page.sidebar.header | upcase }} ++ {% endif %}
+{{ page.sidebar.html | strip_html }}
+{% for sidelink in page.sidebar.sidelinks %}
+{{ sidelink.name }}
+{{ sidelink.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ sidelink.utm_campaign | UrlEncode }}&utm_term={{ sidelink.utm_term | UrlEncode }}
+{% endfor %}
+
+----------
+{% if page.donate %}
+++ {{ page.donate.header | upcase }} ++
+
+{{ page.donate.html | strip_html }}
+{{ page.donate.call }}
+{{ page.donate.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.donate.utm_campaign | UrlEncode }}&utm_term={{ page.donate.utm_term | UrlEncode }}
+{% endif %}
+
+----------
+{% if page.share %}
+++ {{ site.share.text | upcase }} ++
+{% if page.share.url %}
+FACEBOOK:
+http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dfacebook%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}
+
+GOOGLE+:
+https://plus.google.com/share?url={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dgoogle-mas%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}
+{% endif %} {% if page.share.tweet %}
+TWITTER:
+http://twitter.com/?status={{ page.share.tweet | truncate: 140 | UrlEncode }}
+{% endif %} {% endif %}
+
+----------
+
+{{ site.unsubscribe.text }}
+{{ site.unsubscribe.url }}
