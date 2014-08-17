@@ -27,7 +27,9 @@
 <td>
 
 <!-- TITLE, LEAD AND IMAGE -->
+{% if page.title or page.lead or page.main_image %}
 {% include title_lead_image.html %}
+{% endif %}
 <!-- /TITLE, LEAD AND IMAGE -->
 
 <!-- PANNEL -->
