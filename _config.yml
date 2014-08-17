@@ -10,7 +10,7 @@ exclude:
 # Mail Settings - Common to all emails
 name: Greenpeace
 
-organization_url: http://www.greenpeace.org/
+organization_url: http://www.greenpeace.org/espana/es/
 
 organization_logo: https://s.greenqloud.com/greenpeace-es/m-templates/greenpeace.png
 
@@ -22,4 +22,7 @@ share:
 
 utm_medium: email
 
-unsubscribe_text: Si prefieres que no te sigamos informando de las &uacute;ltimas novedades del medio ambiente y Greenpeace, puedes  <a href="{unsubscribe_url~7740~3126}" name="OptOut">darte de baja</a> - &iexcl;aunque te echaremos de menos! :'(
+unsubscribe:
+    html: Si prefieres que no te sigamos informando de las &uacute;ltimas novedades del medio ambiente y Greenpeace, puedes  <a href="{unsubscribe_url~7740~3126}" name="OptOut">darte de baja</a> - &iexcl;aunque te echaremos de menos! :'(
+    text: Si prefieres que no te sigamos informando de las &uacute;ltimas novedades del medio ambiente y Greenpeace, puedes darte de baja - ¡aunque te echaremos de menos! :'(
+    url: "{unsubscribe_url~7740~3126}"
