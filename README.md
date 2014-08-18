@@ -9,6 +9,15 @@ Greenpeace-themed **responsive** email templates for **quick** email **layouting
 + Can be easily adapted to many mail sending services
 + It's easy to create AB tests with content, design or layout
 + Automatic **Google Analytics campaign URLs**
++ Templates that add **link tracking** to Engaging Networks
+
+## List of templates
+
+There's 3 templates, each with 3 variants. The variants render content for different purposes.
+
++ **Normal** templates render a web page to debug and to put on a server as a link. Users that click the link "Read on the web" will see this templates. Normal templates are **one**, **newsletter** and **sidebar**.
++ **Text** - Renders the text version of the mail with Engaging Networks link tracking. Text templates are **one-txt**, **newsletter-txt** and **sidebar-txt**.
++ **Mail with tracking** - This are the templates to upload to Engaging Networks after linearizing the css with premailer. They generate Engaging Networks link tracking.  Mail templates are **one-mail**, **newsletter-mail** and **sidebar-mail**.
 
 ## Develop mails in Github.com or locally?
 
@@ -81,4 +90,6 @@ In your terminal or shell:
 
 ### Create A/B's
 
-Use create git branches with A/B tests and merge the wining variants.
+It is recommended that you use **git** to create git branches with A/B tests and merge the wining variants. 
+
+Github has an easy to use git software both for Windows and Mac.

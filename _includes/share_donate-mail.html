@@ -1,0 +1,54 @@
+<table class="row footer">
+    <tr>
+	<td class="wrapper">
+	    {% if page.share %}
+	    <table class="six columns">
+		<tr>
+		    <td class="left-text-pad">
+			{% if site.share.text %}<h4>{{ site.share.text }}</h4>{% endif %}
+			<table class="tiny-button facebook">
+			    <tr>
+				<td>
+				    <a href="{external_url~http://www.facebook.com/sharer.php?u={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dfacebook%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}~{{page.share.utm_term}}-facebook}">Facebook</a>
+				</td>
+			    </tr>
+			</table>
+			<br>
+			<table class="tiny-button twitter">
+			    <tr>
+				<td>
+				    <a href="{external_url~http://twitter.com/?status={{ page.share.tweet | truncate: 140 | UrlEncode }}~{{page.share.utm_term}}-twitter}">Twitter</a>
+				</td>
+			    </tr>
+			</table>
+			<br>
+			<table class="tiny-button google-plus">
+			    <tr>
+				<td>
+				    <a href="{external_url~https://plus.google.com/share?url={{ page.share.url | UrlEncode }}%3Futm_medium%3Dsocial_network_link%26utm_source%3Dgoogle-mas%26utm_content%3D{{ page.utm_content | UrlEncode }}%26utm_campaign%3D{{ page.share.utm_campaign | UrlEncode }}%26utm_term%3D{{ page.share.utm_term | UrlEncode }}~{{page.share.utm_term}}-google_plus}">Google +</a>
+				</td>
+			    </tr>
+			</table>
+		    </td>
+		    <td class="expander"></td>
+		</tr>
+	    </table>
+	    {% endif %}	    
+	</td>
+	<td class="wrapper last">
+	    
+	    {% if page.donate %}
+	    <table class="six columns">
+		<tr>
+		    <td class="last right-text-pad">
+			{% if page.donate.header %}<h4>{{ page.donate.header }}</h4>{% endif %}
+			{% if page.donate.html %}{{ page.donate.html }}{% endif %}
+			{% if page.donate.call and page.donate.link  %}<p><a href="{external_url~{{ page.donate.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ page.donate.utm_campaign | UrlEncode }}&utm_term={{ page.donate.utm_term | UrlEncode }}~{{page.donate.utm_term}}}">{{ page.donate.call }}</a></p>{% endif %}
+		    </td>
+		    <td class="expander"></td>
+		</tr>
+	    </table>
+	    {% endif %}
+	</td>
+    </tr>
+</table>

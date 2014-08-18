@@ -1,0 +1,47 @@
+<!-- Article list -->
+<table class="row">
+    <tr>
+        <td class="wrapper">
+            
+            {% for article in page.articles %}
+            <table class="twelve columns">
+                <tr>
+                    {% if article.image  %}
+                    <td class="three sub-columns">
+                        <!-- Top Left sub-grid -->
+                        {% if article.link %}<a href="{external_url~{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}~{{article.utm_term}}}">{% endif %}
+                            <img width="120" height="110" src="{{ article.image }}" alt="{{ article.alt }}">
+                        {% if article.link %}</a>{% endif %}
+                    </td>
+                    {% endif %}
+                    <td class="{% if article.image  %}nine{% endif %}{% if !article.image  %}twelve{% endif %} sub-columns last">
+                        <!-- Top Right sub-grid -->
+                        <h4>{% if article.link %}<a href="{external_url~{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}~{{article.utm_term}}}">{% endif %}{{ article.title }}{% if article.link %}</a>{% endif %}</h4>
+                        {{ article.html }}
+                        <!-- custom wrapped button -->
+                        {% if article.link %}
+                        <table width="150">
+                            <tr>
+                                <td>
+                                    <a class="button" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <a href="{external_url~{{ article.link }}?utm_medium={{ site.utm_medium | UrlEncode }}&utm_source={{ page.utm_source | UrlEncode }}&utm_content={{ page.utm_content | UrlEncode }}&utm_campaign={{ article.utm_campaign | UrlEncode }}&utm_term={{ article.utm_term | UrlEncode }}~{{article.utm_term}}}">{{ site.read_more_text | UrlEncode }}</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        {% endif %}
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+            {% endfor %}
+          
+        </td>
+    </tr>
+</table>
