@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width"/>
+<style>
+{% include framework.css %}
+</style>
+<style>
+{% include hero.css %}
+</style>
+</head>
+
+<body>
+<table class="body">
+<tr>
+<td class="center" align="center" valign="top">
+<center>
+
+<!-- HEADER -->
+{% include header-mail.html %}
+<!-- /HEADER -->
+
+<table class="container">
+<tr>
+<td>
+
+<!-- TITLE, LEAD AND IMAGE -->
+{% if page.title or page.lead or page.main_image %}
+{% include title_lead_image-mail.html %}
+{% endif %}
+<!-- /TITLE, LEAD AND IMAGE -->
+
+<!-- PANNEL -->
+{% if page.panel_html %}
+{% include panel-mail.html %}
+{% endif %}
+<!-- /PANNEL -->
+
+<!-- SIDEBAR -->
+{% if page.sidebar %}
+{% include text_and_sidebar-mail.html %}
+{% endif %}
+<!-- SIDEBAR -->
+
+<!-- UNSUBSCRIBE TEXT -->
+{% include unsubscribe.html  %}
+<!-- /UNSUBSCRIBE TEXT -->
+
+
+</td>
+</tr>
+</table><!-- /container -->
+
+</center>
+</td>
+</tr>
+</table>
+</body>
+</html>
